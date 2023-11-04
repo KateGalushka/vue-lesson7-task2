@@ -16,11 +16,9 @@ export default createStore({
   mutations: {
 	addProductToBuy(state, product){
 		state.productsListToBuy.push(product);
-		state.products = state.products.filter(prod => prod.id !== product.id);
 	},
 	deleteProductFromBasket(state, product){
 		state.productsListToBuy = state.productsListToBuy.filter(prod => prod.id !== product.id);
-		state.products.push(product);
 	},
 	  updateCurrencyVal(state, newVal){
 		  state.currentCurrency = newVal;
